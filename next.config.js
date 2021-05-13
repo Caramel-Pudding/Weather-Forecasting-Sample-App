@@ -10,6 +10,13 @@ const nextConfig = {
     domains: ['localhost'],
   },
   webpack: (config, { buildId, dev, isServer, defaultLoaders, webpack }) => {
+    config.module.rules.push({
+      test: /\.svg$/,
+      issuer: {
+        test: /\.(js|ts)x?$/,
+      },
+      use: ['@svgr/webpack'],
+    });
     config.plugins.push(new webpack.IgnorePlugin(/\/__tests__\//))
     return config;
   },

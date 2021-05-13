@@ -19,6 +19,11 @@ class MyDocument extends Document {
       <Html lang="en">
         <Head>
           <link href="/favicon.ico" rel="icon" />
+          <link href="https://fonts.gstatic.com" rel="preconnect" />
+          <link
+            href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+            rel="stylesheet"
+          />
           <meta
             content="Weather Forecast Sample App"
             name="Weather Forecast Sample App"
