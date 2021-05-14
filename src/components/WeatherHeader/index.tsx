@@ -1,38 +1,33 @@
 import React, { FC, memo } from "react";
-import classnames from "classnames";
 
-import { WeatherSunIcon } from "@/components/icons/WeatherSun";
+import { WeatherIconSelector } from "@/components/icons/WeatherIconSelector";
+import { WeatherListItem, City } from "@/types/weather";
+import { CurrentWeather } from "./subComponents/CurrentWeather";
+import { LocationInfo } from "./subComponents/LocationInfo";
 
-import sharedStyles from "../../styles/shared.module.css";
 import styles from "./styles.module.css";
 
-export const WeatherHeader: FC = memo(() => {
-  return (
-    <section className={styles.container}>
-      <WeatherSunIcon />
-      <section>
-        <div
-          className={classnames(
-            sharedStyles.additionalText,
-            styles.weatherHeader
-          )}
-        >
-          <span>Clear</span>
-          <span>12/2</span>
-        </div>
-        <span
-          className={classnames(sharedStyles.mainText, styles.mainTemperature)}
-        >
-          12
-        </span>
+interface WeatherHeaderProps {
+  city: City;
+  chosenWeatherItem: WeatherListItem;
+}
+
+export const WeatherHeader: FC<WeatherHeaderProps> = memo(
+  ({ city, chosenWeatherItem }) => {
+    return (
+      <section className={styles.container}>
+        <WeatherIconSelector weatherType={chosenWeatherItem.weather[0].main} />
+        <CurrentWeather
+          currentTemp={chosenWeatherItem.main.temp}
+          currentWeather={chosenWeatherItem.weather[0].main}
+          maxTemp={chosenWeatherItem.main.temp_max}
+          minTemp={chosenWeatherItem.main.temp_min}
+        />
+        <LocationInfo
+          cityName={city.name}
+          currentDate={new Date(chosenWeatherItem.dt_txt)}
+        />
       </section>
-      <section>
-        <span className={sharedStyles.additionalText}>Munich</span>
-        <div className={classnames(sharedStyles.mainText, styles.date)}>
-          <div>Thursday</div>
-          <div>28. March</div>
-        </div>
-      </section>
-    </section>
-  );
-});
+    );
+  }
+);

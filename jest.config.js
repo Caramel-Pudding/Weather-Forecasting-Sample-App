@@ -21,6 +21,7 @@ module.exports = {
   ],
   moduleNameMapper: {
     '^@/components/(.*)$': resolve(__dirname, './src/components/$1'),
+    '^@/consts/(.*)$': resolve(__dirname, './src/consts/$1'),
     '^@/hooks/(.*)$': resolve(__dirname, './src/hooks/$1'),
     '^@/pages/(.*)$': resolve(__dirname, './src/pages/$1'),
     '^@/styles/(.*)$': resolve(__dirname, './src/styles/$1'),
