@@ -33,6 +33,9 @@
         "@/consts/*": [
           "consts/*"
         ],
+        "@/context/*": [
+          "context/*"
+        ],
         "@/hooks/*": [
           "hooks/*"
         ],

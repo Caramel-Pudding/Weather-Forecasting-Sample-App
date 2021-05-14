@@ -5,7 +5,7 @@ import { WeatherType } from "@/types/weather";
 
 import { convertKelvinToCelsius } from "@/utilities/temperature";
 import sharedStyles from "../../../../styles/shared.module.css";
-import styles from "../../styles.module.css";
+import styles from "./styles.module.css";
 
 interface CurrentWeatherProps {
   currentWeather: WeatherType;
@@ -17,7 +17,7 @@ interface CurrentWeatherProps {
 export const CurrentWeather: FC<CurrentWeatherProps> = memo(
   ({ currentWeather, currentTemp, maxTemp, minTemp }) => {
     return (
-      <section>
+      <section className={styles.container}>
         <div
           className={classnames(
             sharedStyles.additionalText,
@@ -26,13 +26,15 @@ export const CurrentWeather: FC<CurrentWeatherProps> = memo(
         >
           <span>{currentWeather}</span>
           <span>
-            {convertKelvinToCelsius(maxTemp)}/{convertKelvinToCelsius(minTemp)}
+            {`${convertKelvinToCelsius(maxTemp)}° / ${convertKelvinToCelsius(
+              minTemp
+            )}°`}
           </span>
         </div>
         <span
           className={classnames(sharedStyles.mainText, styles.mainTemperature)}
         >
-          {convertKelvinToCelsius(currentTemp)}
+          {`${convertKelvinToCelsius(currentTemp)}°`}
         </span>
       </section>
     );

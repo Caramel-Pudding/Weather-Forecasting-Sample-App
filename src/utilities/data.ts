@@ -11,10 +11,3 @@ export const getWeatherListForToday = (
     (listItem) => new Date(listItem.dt_txt).getDate() === todayDate
   );
 };
-
-export const getTimeStringFromWeatherTimestamp = (
-  weatherTimestamp: string
-): string => {
-  const timestamp = new Date(weatherTimestamp);
-  return `${timestamp.getHours()}:00`;
-};

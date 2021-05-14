@@ -6,7 +6,7 @@ import {
   getMonthAsTextFromTimestamp,
 } from "@/utilities/dates";
 import sharedStyles from "../../../../styles/shared.module.css";
-import styles from "../../styles.module.css";
+import styles from "./styles.module.css";
 
 interface LocationInfoProps {
   cityName: string;
@@ -16,7 +16,7 @@ interface LocationInfoProps {
 export const LocationInfo: FC<LocationInfoProps> = memo(
   ({ cityName, currentDate }) => {
     return (
-      <section>
+      <section className={styles.container}>
         <span className={sharedStyles.additionalText}>{cityName}</span>
         <div className={classnames(sharedStyles.mainText, styles.date)}>
           <div>{getDayAsTextFromTimestamp(currentDate)}</div>

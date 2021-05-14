@@ -1,19 +1,22 @@
 import React, { FC, memo, KeyboardEvent } from "react";
+import classnames from "classnames";
 
-import { WeatherIconSelector } from "@/components/icons/WeatherIconSelector";
+import { WeatherIconSelector } from "@/components/WeatherIconSelector";
 import { WeatherListItem } from "@/types/weather";
-import { getTimeStringFromWeatherTimestamp } from "@/utilities/weather";
+import { getTimeAsTextFromTimestamp } from "@/utilities/dates";
 import { convertKelvinToCelsius } from "@/utilities/temperature";
+
 import sharedStyles from "../../../../styles/shared.module.css";
 import styles from "./styles.module.css";
 
-interface WeatherListPanelProps {
+interface WeatherListButtonProps {
   weatherItem: WeatherListItem;
+  isSelected: boolean;
   handleWeatherItemChange: () => void;
 }
 
-export const WeatherListPanel: FC<WeatherListPanelProps> = memo(
-  ({ weatherItem, handleWeatherItemChange }) => {
+export const WeatherListButton: FC<WeatherListButtonProps> = memo(
+  ({ weatherItem, handleWeatherItemChange, isSelected }) => {
     const keyboardHandler = (event: KeyboardEvent) => {
       if (event.key === "Enter") {
         handleWeatherItemChange();
@@ -22,17 +25,20 @@ export const WeatherListPanel: FC<WeatherListPanelProps> = memo(
 
     return (
       <button
-        className={styles.container}
+        className={classnames(
+          styles.container,
+          isSelected ? styles.containerActive : styles.containerInactive
+        )}
         type="button"
         onClick={handleWeatherItemChange}
         onKeyDown={keyboardHandler}
       >
         <span className={sharedStyles.additionalText}>
-          {getTimeStringFromWeatherTimestamp(weatherItem.dt_txt)}
+          {getTimeAsTextFromTimestamp(new Date(weatherItem.dt_txt))}
         </span>
         <WeatherIconSelector weatherType={weatherItem.weather[0].main} />
-        <span className={sharedStyles.mainText}>
-          {convertKelvinToCelsius(weatherItem.main.temp)}
+        <span className={styles.temperature}>
+          {`${convertKelvinToCelsius(weatherItem.main.temp)}°`}
         </span>
       </button>
     );

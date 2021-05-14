@@ -6,15 +6,13 @@ import { WeatherHeader } from "@/components/WeatherHeader";
 import { WeatherList } from "@/components/WeatherList";
 import { WeatherData, WeatherListItem } from "@/types/weather";
 
-import { getWeatherListForToday } from "@/utilities/weather";
+import { getWeatherListForToday } from "@/utilities/data";
+import { fetchWeather } from "@/network/methods/weather-api";
 import styles from "./styles.module.css";
 
 export const getServerSideProps: GetServerSideProps = async () => {
   // Fetch data from weather API on server side
-  const res = await fetch(
-    `https://samples.openweathermap.org/data/2.5/forecast?q=M%C3%BCnchen,DE&appid=b6907d289e10d714a6e88b30761fae22`
-  );
-  const data = (await res.json()) as WeatherData;
+  const data = await fetchWeather();
 
   // Show 404 if there's no data
   if (!data) {
@@ -32,8 +30,6 @@ interface HomeProps {
 }
 
 const Home: FC<HomeProps> = ({ weatherData }) => {
-  console.log(weatherData);
-
   const weatherPeriodWeActuallyCareAbout: WeatherListItem[] = useMemo(
     () => getWeatherListForToday(weatherData.list),
     [weatherData]
@@ -64,6 +60,7 @@ const Home: FC<HomeProps> = ({ weatherData }) => {
           city={weatherData.city}
         />
         <WeatherList
+          chosenWeatherItem={chosenWeatherItem}
           handleWeatherItemChange={handleWeatherItemChange}
           weatherItems={weatherPeriodWeActuallyCareAbout}
         />

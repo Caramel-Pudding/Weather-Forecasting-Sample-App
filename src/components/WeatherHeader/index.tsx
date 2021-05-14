@@ -1,6 +1,6 @@
 import React, { FC, memo } from "react";
 
-import { WeatherIconSelector } from "@/components/icons/WeatherIconSelector";
+import { WeatherIconSelector } from "@/components/WeatherIconSelector";
 import { WeatherListItem, City } from "@/types/weather";
 import { CurrentWeather } from "./subComponents/CurrentWeather";
 import { LocationInfo } from "./subComponents/LocationInfo";
@@ -16,7 +16,11 @@ export const WeatherHeader: FC<WeatherHeaderProps> = memo(
   ({ city, chosenWeatherItem }) => {
     return (
       <section className={styles.container}>
-        <WeatherIconSelector weatherType={chosenWeatherItem.weather[0].main} />
+        <div className={styles.imageWrapper}>
+          <WeatherIconSelector
+            weatherType={chosenWeatherItem.weather[0].main}
+          />
+        </div>
         <CurrentWeather
           currentTemp={chosenWeatherItem.main.temp}
           currentWeather={chosenWeatherItem.weather[0].main}
