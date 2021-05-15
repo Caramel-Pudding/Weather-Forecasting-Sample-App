@@ -33,13 +33,15 @@ export const WeatherListButton: FC<WeatherListButtonProps> = memo(
         onClick={handleWeatherItemChange}
         onKeyDown={keyboardHandler}
       >
-        <span className={sharedStyles.additionalText}>
+        <div className={sharedStyles.additionalText}>
           {getTimeAsTextFromTimestamp(new Date(weatherItem.dt_txt))}
-        </span>
-        <WeatherIconSelector weatherType={weatherItem.weather[0].main} />
-        <span className={styles.temperature}>
+        </div>
+        <section className={styles.imageWrapper}>
+          <WeatherIconSelector weatherType={weatherItem.weather[0].main} />
+        </section>
+        <div className={styles.temperature}>
           {`${convertKelvinToCelsius(weatherItem.main.temp)}°`}
-        </span>
+        </div>
       </button>
     );
   }

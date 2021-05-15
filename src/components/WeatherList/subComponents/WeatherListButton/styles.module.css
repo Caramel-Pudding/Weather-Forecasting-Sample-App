@@ -3,6 +3,7 @@
   flex-direction: column;
   align-items: center;
   width: 10vw;
+  min-width: 120px;
   padding: 32px;
   border-radius: 6px;
   cursor: pointer;
@@ -23,6 +24,10 @@
 .temperature {
   font-size: 3vw;
   color: white;
-  padding-top: 1vw;
   font-weight: bold;
+}
+
+.imageWrapper {
+  margin: 10px 0;
+  width: 90%;
 }

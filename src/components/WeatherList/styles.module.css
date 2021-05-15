@@ -1,11 +1,11 @@
 .container {
-  height: 40vh;
+  box-sizing: border-box;
+  height: 45%;
 }
 
 .weatherItemsRow {
   display: flex;
   flex-direction: row;
-  width: 100%;
   overflow-y: scroll;
 }
 

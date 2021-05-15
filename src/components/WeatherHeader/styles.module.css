@@ -1,11 +1,7 @@
 .container {
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
-  height: 55vh;
+  box-sizing: border-box;
+  height: 55%;
   padding: 100px 0;
-}
-
-.imageWrapper {
-  width: 17%;
 }

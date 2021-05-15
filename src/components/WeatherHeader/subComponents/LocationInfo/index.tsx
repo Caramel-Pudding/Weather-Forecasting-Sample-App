@@ -16,17 +16,19 @@ interface LocationInfoProps {
 export const LocationInfo: FC<LocationInfoProps> = memo(
   ({ cityName, currentDate }) => {
     return (
-      <section className={styles.container}>
-        <span className={sharedStyles.additionalText}>{cityName}</span>
-        <div className={classnames(sharedStyles.mainText, styles.date)}>
-          <div>{getDayAsTextFromTimestamp(currentDate)}</div>
-          <div>
-            {`${currentDate.getDate()}. ${getMonthAsTextFromTimestamp(
-              currentDate
-            )}`}
-          </div>
-        </div>
-      </section>
+      <article className={styles.container}>
+        <section>
+          <div className={sharedStyles.additionalText}>{cityName}</div>
+          <section className={classnames(sharedStyles.mainText, styles.date)}>
+            <div>{getDayAsTextFromTimestamp(currentDate)}</div>
+            <div>
+              {`${currentDate.getDate()}. ${getMonthAsTextFromTimestamp(
+                currentDate
+              )}`}
+            </div>
+          </section>
+        </section>
+      </article>
     );
   }
 );
