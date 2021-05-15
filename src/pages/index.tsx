@@ -60,7 +60,7 @@ const Home: FC<HomeProps> = ({ weatherData }) => {
           city={weatherData.city}
         />
         <WeatherList
-          chosenWeatherItem={chosenWeatherItem}
+          chosenWeatherItemTimestamp={chosenWeatherItem.dt_txt}
           handleWeatherItemChange={handleWeatherItemChange}
           weatherItems={weatherPeriodWeActuallyCareAbout}
         />

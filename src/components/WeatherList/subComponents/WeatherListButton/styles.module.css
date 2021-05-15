@@ -7,18 +7,19 @@
   padding: 32px;
   border-radius: 6px;
   cursor: pointer;
+  transition: background-color 0.2s ease-in;
 }
 
 .containerActive {
-  background-color: rgba(255, 255, 255, 0.4);
+  background-color: rgba(255, 255, 255, 0.2);
 }
 
 .containerInactive:hover {
-  background-color: rgba(255, 255, 255, 0.2);
+  background-color: rgba(255, 255, 255, 0.1);
 }
 
 .containerInactive:focus {
-  background-color: rgba(255, 255, 255, 0.2);
+  background-color: rgba(255, 255, 255, 0.1);
 }
 
 .temperature {

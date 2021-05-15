@@ -7,12 +7,12 @@ import styles from "./styles.module.css";
 
 interface WeatherListProps {
   weatherItems: WeatherListItem[];
-  chosenWeatherItem: WeatherListItem;
+  chosenWeatherItemTimestamp: string;
   handleWeatherItemChange: (timestamp: string) => void;
 }
 
 export const WeatherList: FC<WeatherListProps> = memo(
-  ({ weatherItems, chosenWeatherItem, handleWeatherItemChange }) => {
+  ({ weatherItems, chosenWeatherItemTimestamp, handleWeatherItemChange }) => {
     return (
       <section className={styles.container}>
         <ol className={styles.weatherItemsRow}>
@@ -22,7 +22,7 @@ export const WeatherList: FC<WeatherListProps> = memo(
                 handleWeatherItemChange={() =>
                   handleWeatherItemChange(weatherItem.dt_txt)
                 }
-                isSelected={chosenWeatherItem.dt_txt === weatherItem.dt_txt}
+                isSelected={weatherItem.dt_txt === chosenWeatherItemTimestamp}
                 weatherItem={weatherItem}
               />
             </li>

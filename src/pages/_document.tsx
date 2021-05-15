@@ -24,10 +24,7 @@ class MyDocument extends Document {
             href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
             rel="stylesheet"
           />
-          <meta
-            content="Weather Forecast Sample App"
-            name="Weather Forecast Sample App"
-          />
+          <meta content="Weather Forecast Sample App" name="description" />
         </Head>
         <body>
           <Main />
