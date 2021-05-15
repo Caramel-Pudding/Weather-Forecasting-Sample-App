@@ -5,15 +5,15 @@ import Head from "next/head";
 import { WeatherHeader } from "@/components/WeatherHeader";
 import { WeatherList } from "@/components/WeatherList";
 import { WeatherData, WeatherListItem } from "@/types/weather";
+import { city } from "@/consts/mocked";
 
 import { getWeatherListForToday } from "@/utilities/data";
-import { fetchWeather } from "@/network/methods/weather-api";
+import { fetchWeather } from "@/network/weather-api/methods";
 import styles from "./styles.module.css";
 
 export const getServerSideProps: GetServerSideProps = async () => {
   // Fetch data from weather API on server side
-  const data = await fetchWeather();
-
+  const data = await fetchWeather(city);
   // Show 404 if there's no data
   if (!data) {
     return {
