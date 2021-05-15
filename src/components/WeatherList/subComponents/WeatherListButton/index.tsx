@@ -3,7 +3,10 @@ import classnames from "classnames";
 
 import { WeatherIconSelector } from "@/components/WeatherIconSelector";
 import { WeatherListItem } from "@/types/weather";
-import { getTimeAsTextFromTimestamp } from "@/utilities/dates";
+import {
+  convertUnixTimestampToDate,
+  getTimeAsTextFromTimestamp,
+} from "@/utilities/dates";
 import { convertKelvinToCelsius } from "@/utilities/temperature";
 
 import sharedStyles from "../../../../styles/shared.module.css";
@@ -34,7 +37,9 @@ export const WeatherListButton: FC<WeatherListButtonProps> = memo(
         onKeyDown={keyboardHandler}
       >
         <div className={sharedStyles.additionalText}>
-          {getTimeAsTextFromTimestamp(new Date(weatherItem.dt_txt))}
+          {getTimeAsTextFromTimestamp(
+            convertUnixTimestampToDate(weatherItem.dt)
+          )}
         </div>
         <section className={styles.imageWrapper}>
           <WeatherIconSelector weatherType={weatherItem.weather[0].main} />

@@ -9,6 +9,7 @@ import { city } from "@/consts/mocked";
 
 import { getWeatherListForToday } from "@/utilities/data";
 import { fetchWeather } from "@/network/weather-api/methods";
+import ErrorPage from "./404";
 import styles from "./styles.module.css";
 
 export const getServerSideProps: GetServerSideProps = async () => {
@@ -39,15 +40,19 @@ const Home: FC<HomeProps> = ({ weatherData }) => {
     weatherPeriodWeActuallyCareAbout[0]
   );
 
-  const handleWeatherItemChange = (timestamp: string) => {
+  const handleWeatherItemChange = (timestamp: number) => {
     const targetWeatherItem = weatherPeriodWeActuallyCareAbout.find(
-      (weatherItem) => weatherItem.dt_txt === timestamp
+      (weatherItem) => weatherItem.dt === timestamp
     );
     if (!targetWeatherItem) {
       return;
     }
     setChosenWeatherItem(targetWeatherItem);
   };
+
+  if (!chosenWeatherItem) {
+    <ErrorPage />;
+  }
 
   return (
     <>
@@ -60,7 +65,7 @@ const Home: FC<HomeProps> = ({ weatherData }) => {
           city={weatherData.city}
         />
         <WeatherList
-          chosenWeatherItemTimestamp={chosenWeatherItem.dt_txt}
+          chosenWeatherItemTimestamp={chosenWeatherItem.dt}
           handleWeatherItemChange={handleWeatherItemChange}
           weatherItems={weatherPeriodWeActuallyCareAbout}
         />

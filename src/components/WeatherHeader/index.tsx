@@ -1,6 +1,7 @@
 import React, { FC, memo } from "react";
 
 import { WeatherListItem, City } from "@/types/weather";
+import { convertUnixTimestampToDate } from "@/utilities/dates";
 import { CurrentWeather } from "./subComponents/CurrentWeather";
 import { LocationInfo } from "./subComponents/LocationInfo";
 
@@ -23,7 +24,7 @@ export const WeatherHeader: FC<WeatherHeaderProps> = memo(
         />
         <LocationInfo
           cityName={city.name}
-          currentDate={new Date(chosenWeatherItem.dt_txt)}
+          currentDate={convertUnixTimestampToDate(chosenWeatherItem.dt)}
         />
       </article>
     );

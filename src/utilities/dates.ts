@@ -1,5 +1,8 @@
 import { DayOfTheWeek, Month } from "@/consts/dates";
 
+export const convertUnixTimestampToDate = (unixTimestamp: number): Date =>
+  new Date(unixTimestamp * 1000);
+
 export const getDayAsTextFromTimestamp = (timestamp: Date): string =>
   DayOfTheWeek[timestamp.getDay()];
 

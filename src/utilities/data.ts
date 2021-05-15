@@ -1,4 +1,5 @@
 import { WeatherListItem } from "@/types/weather";
+import { convertUnixTimestampToDate } from "./dates";
 
 export const getWeatherListForToday = (
   weatherList: WeatherListItem[]
@@ -6,8 +7,10 @@ export const getWeatherListForToday = (
   if (!weatherList || weatherList.length === 0) {
     return [];
   }
-  const todayDate = new Date(weatherList[0].dt_txt).getDate();
+
+  const todayDate = convertUnixTimestampToDate(weatherList[0].dt).getDate();
   return weatherList.filter(
-    (listItem) => new Date(listItem.dt_txt).getDate() === todayDate
+    (listItem) =>
+      convertUnixTimestampToDate(listItem.dt).getDate() === todayDate
   );
 };

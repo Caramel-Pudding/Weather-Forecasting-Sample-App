@@ -7,8 +7,8 @@ import styles from "./styles.module.css";
 
 interface WeatherListProps {
   weatherItems: WeatherListItem[];
-  chosenWeatherItemTimestamp: string;
-  handleWeatherItemChange: (timestamp: string) => void;
+  chosenWeatherItemTimestamp: number;
+  handleWeatherItemChange: (timestamp: number) => void;
 }
 
 export const WeatherList: FC<WeatherListProps> = memo(
@@ -20,9 +20,9 @@ export const WeatherList: FC<WeatherListProps> = memo(
             <li key={weatherItem.dt} className={styles.listItem}>
               <WeatherListButton
                 handleWeatherItemChange={() =>
-                  handleWeatherItemChange(weatherItem.dt_txt)
+                  handleWeatherItemChange(weatherItem.dt)
                 }
-                isSelected={weatherItem.dt_txt === chosenWeatherItemTimestamp}
+                isSelected={weatherItem.dt === chosenWeatherItemTimestamp}
                 weatherItem={weatherItem}
               />
             </li>
