@@ -5,14 +5,14 @@ import { WeatherListButton } from "./subComponents/WeatherListButton";
 
 import styles from "./styles.module.css";
 
-interface WeatherListProps {
+export interface WeatherListProps {
   weatherItems: WeatherListItem[];
-  chosenWeatherItemTimestamp: number;
+  selectedWeatherItemTimestamp: number;
   handleWeatherItemChange: (timestamp: number) => void;
 }
 
 export const WeatherList: FC<WeatherListProps> = memo(
-  ({ weatherItems, chosenWeatherItemTimestamp, handleWeatherItemChange }) => {
+  ({ weatherItems, selectedWeatherItemTimestamp, handleWeatherItemChange }) => {
     return (
       <section className={styles.container}>
         <ol className={styles.weatherItemsRow}>
@@ -22,7 +22,7 @@ export const WeatherList: FC<WeatherListProps> = memo(
                 handleWeatherItemChange={() =>
                   handleWeatherItemChange(weatherItem.dt)
                 }
-                isSelected={weatherItem.dt === chosenWeatherItemTimestamp}
+                isSelected={weatherItem.dt === selectedWeatherItemTimestamp}
                 weatherItem={weatherItem}
               />
             </li>

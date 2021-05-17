@@ -1,0 +1,63 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`WeatherHeader Component Should render properly if there's proper data 1`] = `
+<div>
+  <article
+    class="container"
+  >
+    <article
+      class="container"
+    >
+      <section
+        class="imageWrapper"
+      >
+        <img
+          alt="Clear"
+          src="icons/weather-sun.svg"
+        />
+      </section>
+      <section
+        class="weatherWrapper"
+        data-testid="CURRENT-TEMPERATURE-TEST-ID"
+      >
+        <div
+          class="additionalText weatherHeader"
+        >
+          <span>
+            Clear
+          </span>
+          <span>
+            14° / 8°
+          </span>
+        </div>
+        <div
+          class="mainText mainTemperature"
+        >
+          14°
+        </div>
+      </section>
+    </article>
+    <article
+      class="container"
+    >
+      <section>
+        <div
+          class="additionalText"
+        >
+          Altstadt
+        </div>
+        <section
+          class="mainText date"
+        >
+          <div>
+            Friday
+          </div>
+          <div>
+            16. February
+          </div>
+        </section>
+      </section>
+    </article>
+  </article>
+</div>
+`;

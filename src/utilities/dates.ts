@@ -10,5 +10,6 @@ export const getMonthAsTextFromTimestamp = (timestamp: Date): string =>
   Month[timestamp.getMonth()];
 
 export const getTimeAsTextFromTimestamp = (timestamp: Date): string => {
-  return `${timestamp.getHours()}:00`;
+  const hours = timestamp.getHours();
+  return hours < 10 ? `0${hours}:00` : `${hours}:00`;
 };

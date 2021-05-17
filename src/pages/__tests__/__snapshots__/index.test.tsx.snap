@@ -1,0 +1,801 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`The Home Page Component Should not change selected on click on the same weather item 1`] = `
+<div>
+  <main
+    class="main"
+    data-testid="HOME-MAIN-TEST-ID"
+  >
+    <article
+      class="container"
+    >
+      <article
+        class="container"
+      >
+        <section
+          class="imageWrapper"
+        >
+          <img
+            alt="Clear"
+            src="icons/weather-sun.svg"
+          />
+        </section>
+        <section
+          class="weatherWrapper"
+          data-testid="CURRENT-TEMPERATURE-TEST-ID"
+        >
+          <div
+            class="additionalText weatherHeader"
+          >
+            <span>
+              Clear
+            </span>
+            <span>
+              14° / 8°
+            </span>
+          </div>
+          <div
+            class="mainText mainTemperature"
+          >
+            14°
+          </div>
+        </section>
+      </article>
+      <article
+        class="container"
+      >
+        <section>
+          <div
+            class="additionalText"
+          >
+            Altstadt
+          </div>
+          <section
+            class="mainText date"
+          >
+            <div>
+              Friday
+            </div>
+            <div>
+              16. February
+            </div>
+          </section>
+        </section>
+      </article>
+    </article>
+    <section
+      class="container"
+    >
+      <ol
+        class="weatherItemsRow"
+      >
+        <li
+          class="listItem"
+        >
+          <button
+            class="container containerActive"
+            type="button"
+          >
+            <div
+              class="additionalText"
+            >
+              15:00
+            </div>
+            <section
+              class="imageWrapper"
+            >
+              <img
+                alt="Clear"
+                src="icons/weather-sun.svg"
+              />
+            </section>
+            <div
+              class="temperature"
+            >
+              14°
+            </div>
+          </button>
+        </li>
+        <li
+          class="listItem"
+        >
+          <button
+            class="container containerInactive"
+            type="button"
+          >
+            <div
+              class="additionalText"
+            >
+              18:00
+            </div>
+            <section
+              class="imageWrapper"
+            >
+              <img
+                alt="Clear"
+                src="icons/weather-sun.svg"
+              />
+            </section>
+            <div
+              class="temperature"
+            >
+              13°
+            </div>
+          </button>
+        </li>
+        <li
+          class="listItem"
+        >
+          <button
+            class="container containerInactive"
+            type="button"
+          >
+            <div
+              class="additionalText"
+            >
+              21:00
+            </div>
+            <section
+              class="imageWrapper"
+            >
+              <img
+                alt="Clear"
+                src="icons/weather-sun.svg"
+              />
+            </section>
+            <div
+              class="temperature"
+            >
+              4°
+            </div>
+          </button>
+        </li>
+      </ol>
+    </section>
+  </main>
+</div>
+`;
+
+exports[`The Home Page Component Should not change selected on click on the same weather item 2`] = `
+<div>
+  <main
+    class="main"
+    data-testid="HOME-MAIN-TEST-ID"
+  >
+    <article
+      class="container"
+    >
+      <article
+        class="container"
+      >
+        <section
+          class="imageWrapper"
+        >
+          <img
+            alt="Clear"
+            src="icons/weather-sun.svg"
+          />
+        </section>
+        <section
+          class="weatherWrapper"
+          data-testid="CURRENT-TEMPERATURE-TEST-ID"
+        >
+          <div
+            class="additionalText weatherHeader"
+          >
+            <span>
+              Clear
+            </span>
+            <span>
+              14° / 8°
+            </span>
+          </div>
+          <div
+            class="mainText mainTemperature"
+          >
+            14°
+          </div>
+        </section>
+      </article>
+      <article
+        class="container"
+      >
+        <section>
+          <div
+            class="additionalText"
+          >
+            Altstadt
+          </div>
+          <section
+            class="mainText date"
+          >
+            <div>
+              Friday
+            </div>
+            <div>
+              16. February
+            </div>
+          </section>
+        </section>
+      </article>
+    </article>
+    <section
+      class="container"
+    >
+      <ol
+        class="weatherItemsRow"
+      >
+        <li
+          class="listItem"
+        >
+          <button
+            class="container containerActive"
+            type="button"
+          >
+            <div
+              class="additionalText"
+            >
+              15:00
+            </div>
+            <section
+              class="imageWrapper"
+            >
+              <img
+                alt="Clear"
+                src="icons/weather-sun.svg"
+              />
+            </section>
+            <div
+              class="temperature"
+            >
+              14°
+            </div>
+          </button>
+        </li>
+        <li
+          class="listItem"
+        >
+          <button
+            class="container containerInactive"
+            type="button"
+          >
+            <div
+              class="additionalText"
+            >
+              18:00
+            </div>
+            <section
+              class="imageWrapper"
+            >
+              <img
+                alt="Clear"
+                src="icons/weather-sun.svg"
+              />
+            </section>
+            <div
+              class="temperature"
+            >
+              13°
+            </div>
+          </button>
+        </li>
+        <li
+          class="listItem"
+        >
+          <button
+            class="container containerInactive"
+            type="button"
+          >
+            <div
+              class="additionalText"
+            >
+              21:00
+            </div>
+            <section
+              class="imageWrapper"
+            >
+              <img
+                alt="Clear"
+                src="icons/weather-sun.svg"
+              />
+            </section>
+            <div
+              class="temperature"
+            >
+              4°
+            </div>
+          </button>
+        </li>
+      </ol>
+    </section>
+  </main>
+</div>
+`;
+
+exports[`The Home Page Component Should properly change selected on click on other weather item 1`] = `
+<div>
+  <main
+    class="main"
+    data-testid="HOME-MAIN-TEST-ID"
+  >
+    <article
+      class="container"
+    >
+      <article
+        class="container"
+      >
+        <section
+          class="imageWrapper"
+        >
+          <img
+            alt="Clear"
+            src="icons/weather-sun.svg"
+          />
+        </section>
+        <section
+          class="weatherWrapper"
+          data-testid="CURRENT-TEMPERATURE-TEST-ID"
+        >
+          <div
+            class="additionalText weatherHeader"
+          >
+            <span>
+              Clear
+            </span>
+            <span>
+              14° / 8°
+            </span>
+          </div>
+          <div
+            class="mainText mainTemperature"
+          >
+            14°
+          </div>
+        </section>
+      </article>
+      <article
+        class="container"
+      >
+        <section>
+          <div
+            class="additionalText"
+          >
+            Altstadt
+          </div>
+          <section
+            class="mainText date"
+          >
+            <div>
+              Friday
+            </div>
+            <div>
+              16. February
+            </div>
+          </section>
+        </section>
+      </article>
+    </article>
+    <section
+      class="container"
+    >
+      <ol
+        class="weatherItemsRow"
+      >
+        <li
+          class="listItem"
+        >
+          <button
+            class="container containerActive"
+            type="button"
+          >
+            <div
+              class="additionalText"
+            >
+              15:00
+            </div>
+            <section
+              class="imageWrapper"
+            >
+              <img
+                alt="Clear"
+                src="icons/weather-sun.svg"
+              />
+            </section>
+            <div
+              class="temperature"
+            >
+              14°
+            </div>
+          </button>
+        </li>
+        <li
+          class="listItem"
+        >
+          <button
+            class="container containerInactive"
+            type="button"
+          >
+            <div
+              class="additionalText"
+            >
+              18:00
+            </div>
+            <section
+              class="imageWrapper"
+            >
+              <img
+                alt="Clear"
+                src="icons/weather-sun.svg"
+              />
+            </section>
+            <div
+              class="temperature"
+            >
+              13°
+            </div>
+          </button>
+        </li>
+        <li
+          class="listItem"
+        >
+          <button
+            class="container containerInactive"
+            type="button"
+          >
+            <div
+              class="additionalText"
+            >
+              21:00
+            </div>
+            <section
+              class="imageWrapper"
+            >
+              <img
+                alt="Clear"
+                src="icons/weather-sun.svg"
+              />
+            </section>
+            <div
+              class="temperature"
+            >
+              4°
+            </div>
+          </button>
+        </li>
+      </ol>
+    </section>
+  </main>
+</div>
+`;
+
+exports[`The Home Page Component Should properly change selected on click on other weather item 2`] = `
+<div>
+  <main
+    class="main"
+    data-testid="HOME-MAIN-TEST-ID"
+  >
+    <article
+      class="container"
+    >
+      <article
+        class="container"
+      >
+        <section
+          class="imageWrapper"
+        >
+          <img
+            alt="Clear"
+            src="icons/weather-sun.svg"
+          />
+        </section>
+        <section
+          class="weatherWrapper"
+          data-testid="CURRENT-TEMPERATURE-TEST-ID"
+        >
+          <div
+            class="additionalText weatherHeader"
+          >
+            <span>
+              Clear
+            </span>
+            <span>
+              13° / 9°
+            </span>
+          </div>
+          <div
+            class="mainText mainTemperature"
+          >
+            13°
+          </div>
+        </section>
+      </article>
+      <article
+        class="container"
+      >
+        <section>
+          <div
+            class="additionalText"
+          >
+            Altstadt
+          </div>
+          <section
+            class="mainText date"
+          >
+            <div>
+              Friday
+            </div>
+            <div>
+              16. February
+            </div>
+          </section>
+        </section>
+      </article>
+    </article>
+    <section
+      class="container"
+    >
+      <ol
+        class="weatherItemsRow"
+      >
+        <li
+          class="listItem"
+        >
+          <button
+            class="container containerInactive"
+            type="button"
+          >
+            <div
+              class="additionalText"
+            >
+              15:00
+            </div>
+            <section
+              class="imageWrapper"
+            >
+              <img
+                alt="Clear"
+                src="icons/weather-sun.svg"
+              />
+            </section>
+            <div
+              class="temperature"
+            >
+              14°
+            </div>
+          </button>
+        </li>
+        <li
+          class="listItem"
+        >
+          <button
+            class="container containerActive"
+            type="button"
+          >
+            <div
+              class="additionalText"
+            >
+              18:00
+            </div>
+            <section
+              class="imageWrapper"
+            >
+              <img
+                alt="Clear"
+                src="icons/weather-sun.svg"
+              />
+            </section>
+            <div
+              class="temperature"
+            >
+              13°
+            </div>
+          </button>
+        </li>
+        <li
+          class="listItem"
+        >
+          <button
+            class="container containerInactive"
+            type="button"
+          >
+            <div
+              class="additionalText"
+            >
+              21:00
+            </div>
+            <section
+              class="imageWrapper"
+            >
+              <img
+                alt="Clear"
+                src="icons/weather-sun.svg"
+              />
+            </section>
+            <div
+              class="temperature"
+            >
+              4°
+            </div>
+          </button>
+        </li>
+      </ol>
+    </section>
+  </main>
+</div>
+`;
+
+exports[`The Home Page Component Should render properly if there's proper data 1`] = `
+<main
+  class="main"
+  data-testid="HOME-MAIN-TEST-ID"
+>
+  <article
+    class="container"
+  >
+    <article
+      class="container"
+    >
+      <section
+        class="imageWrapper"
+      >
+        <img
+          alt="Clear"
+          src="icons/weather-sun.svg"
+        />
+      </section>
+      <section
+        class="weatherWrapper"
+        data-testid="CURRENT-TEMPERATURE-TEST-ID"
+      >
+        <div
+          class="additionalText weatherHeader"
+        >
+          <span>
+            Clear
+          </span>
+          <span>
+            14° / 8°
+          </span>
+        </div>
+        <div
+          class="mainText mainTemperature"
+        >
+          14°
+        </div>
+      </section>
+    </article>
+    <article
+      class="container"
+    >
+      <section>
+        <div
+          class="additionalText"
+        >
+          Altstadt
+        </div>
+        <section
+          class="mainText date"
+        >
+          <div>
+            Friday
+          </div>
+          <div>
+            16. February
+          </div>
+        </section>
+      </section>
+    </article>
+  </article>
+  <section
+    class="container"
+  >
+    <ol
+      class="weatherItemsRow"
+    >
+      <li
+        class="listItem"
+      >
+        <button
+          class="container containerActive"
+          type="button"
+        >
+          <div
+            class="additionalText"
+          >
+            15:00
+          </div>
+          <section
+            class="imageWrapper"
+          >
+            <img
+              alt="Clear"
+              src="icons/weather-sun.svg"
+            />
+          </section>
+          <div
+            class="temperature"
+          >
+            14°
+          </div>
+        </button>
+      </li>
+      <li
+        class="listItem"
+      >
+        <button
+          class="container containerInactive"
+          type="button"
+        >
+          <div
+            class="additionalText"
+          >
+            18:00
+          </div>
+          <section
+            class="imageWrapper"
+          >
+            <img
+              alt="Clear"
+              src="icons/weather-sun.svg"
+            />
+          </section>
+          <div
+            class="temperature"
+          >
+            13°
+          </div>
+        </button>
+      </li>
+      <li
+        class="listItem"
+      >
+        <button
+          class="container containerInactive"
+          type="button"
+        >
+          <div
+            class="additionalText"
+          >
+            21:00
+          </div>
+          <section
+            class="imageWrapper"
+          >
+            <img
+              alt="Clear"
+              src="icons/weather-sun.svg"
+            />
+          </section>
+          <div
+            class="temperature"
+          >
+            4°
+          </div>
+        </button>
+      </li>
+    </ol>
+  </section>
+</main>
+`;
+
+exports[`The Home Page Component Should show 404 if there's invalid data 1`] = `
+<main
+  class="main container"
+  data-testid="ERROR-MAIN-TEST-ID"
+>
+  <h1>
+    Well, let\`s just hope the weather will be great!
+  </h1>
+</main>
+`;
+
+exports[`The Home Page Component Should show 404 if there's no data 1`] = `
+<main
+  class="main container"
+  data-testid="ERROR-MAIN-TEST-ID"
+>
+  <h1>
+    Well, let\`s just hope the weather will be great!
+  </h1>
+</main>
+`;

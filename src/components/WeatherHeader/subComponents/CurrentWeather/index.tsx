@@ -5,6 +5,7 @@ import { WeatherType } from "@/types/weather";
 import { WeatherIconSelector } from "@/components/WeatherIconSelector";
 import { convertKelvinToCelsius } from "@/utilities/temperature";
 
+import { currentTemperatureTestId } from "@/consts/test-ids";
 import sharedStyles from "../../../../styles/shared.module.css";
 import styles from "./styles.module.css";
 
@@ -22,7 +23,10 @@ export const CurrentWeather: FC<CurrentWeatherProps> = memo(
         <section className={styles.imageWrapper}>
           <WeatherIconSelector weatherType={currentWeather} />
         </section>
-        <section className={styles.weatherWrapper}>
+        <section
+          className={styles.weatherWrapper}
+          data-testid={currentTemperatureTestId}
+        >
           <div
             className={classnames(
               sharedStyles.additionalText,

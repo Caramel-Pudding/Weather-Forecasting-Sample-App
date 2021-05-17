@@ -12,7 +12,7 @@ import { convertKelvinToCelsius } from "@/utilities/temperature";
 import sharedStyles from "../../../../styles/shared.module.css";
 import styles from "./styles.module.css";
 
-interface WeatherListButtonProps {
+export interface WeatherListButtonProps {
   weatherItem: WeatherListItem;
   isSelected: boolean;
   handleWeatherItemChange: () => void;

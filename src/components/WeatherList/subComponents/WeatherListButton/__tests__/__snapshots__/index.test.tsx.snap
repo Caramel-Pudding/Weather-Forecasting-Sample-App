@@ -1,0 +1,169 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`WeatherListButton Component Should conatin \`containerActive\` class if selected 1`] = `
+<div>
+  <button
+    class="container containerActive"
+    type="button"
+  >
+    <div
+      class="additionalText"
+    >
+      15:00
+    </div>
+    <section
+      class="imageWrapper"
+    >
+      <img
+        alt="Clear"
+        src="icons/weather-sun.svg"
+      />
+    </section>
+    <div
+      class="temperature"
+    >
+      14°
+    </div>
+  </button>
+</div>
+`;
+
+exports[`WeatherListButton Component Should conatin \`containerInactive\` class if selected 1`] = `
+<div>
+  <button
+    class="container containerInactive"
+    type="button"
+  >
+    <div
+      class="additionalText"
+    >
+      15:00
+    </div>
+    <section
+      class="imageWrapper"
+    >
+      <img
+        alt="Clear"
+        src="icons/weather-sun.svg"
+      />
+    </section>
+    <div
+      class="temperature"
+    >
+      14°
+    </div>
+  </button>
+</div>
+`;
+
+exports[`WeatherListButton Component Should fire event on pressing enter 1`] = `
+<div>
+  <button
+    class="container containerInactive"
+    type="button"
+  >
+    <div
+      class="additionalText"
+    >
+      15:00
+    </div>
+    <section
+      class="imageWrapper"
+    >
+      <img
+        alt="Clear"
+        src="icons/weather-sun.svg"
+      />
+    </section>
+    <div
+      class="temperature"
+    >
+      14°
+    </div>
+  </button>
+</div>
+`;
+
+exports[`WeatherListButton Component Should fire event onClick 1`] = `
+<div>
+  <button
+    class="container containerInactive"
+    type="button"
+  >
+    <div
+      class="additionalText"
+    >
+      15:00
+    </div>
+    <section
+      class="imageWrapper"
+    >
+      <img
+        alt="Clear"
+        src="icons/weather-sun.svg"
+      />
+    </section>
+    <div
+      class="temperature"
+    >
+      14°
+    </div>
+  </button>
+</div>
+`;
+
+exports[`WeatherListButton Component Should not fire event on pressing anything except enter 1`] = `
+<div>
+  <button
+    class="container containerInactive"
+    type="button"
+  >
+    <div
+      class="additionalText"
+    >
+      15:00
+    </div>
+    <section
+      class="imageWrapper"
+    >
+      <img
+        alt="Clear"
+        src="icons/weather-sun.svg"
+      />
+    </section>
+    <div
+      class="temperature"
+    >
+      14°
+    </div>
+  </button>
+</div>
+`;
+
+exports[`WeatherListButton Component Should render properly if there's proper data 1`] = `
+<div>
+  <button
+    class="container containerActive"
+    type="button"
+  >
+    <div
+      class="additionalText"
+    >
+      15:00
+    </div>
+    <section
+      class="imageWrapper"
+    >
+      <img
+        alt="Clear"
+        src="icons/weather-sun.svg"
+      />
+    </section>
+    <div
+      class="temperature"
+    >
+      14°
+    </div>
+  </button>
+</div>
+`;

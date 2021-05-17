@@ -1,0 +1,27 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`LocationInfo Component Should render properly if there's proper data 1`] = `
+<div>
+  <article
+    class="container"
+  >
+    <section>
+      <div
+        class="additionalText"
+      >
+        Altstadt
+      </div>
+      <section
+        class="mainText date"
+      >
+        <div>
+          Friday
+        </div>
+        <div>
+          16. February
+        </div>
+      </section>
+    </section>
+  </article>
+</div>
+`;

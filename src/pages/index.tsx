@@ -8,7 +8,8 @@ import { WeatherData, WeatherListItem } from "@/types/weather";
 import { city } from "@/consts/mocked";
 
 import { getWeatherListForToday } from "@/utilities/data";
-import { fetchWeather } from "@/network/weather-api/methods";
+import { fetchWeather } from "@/network/weather-api/methods/fetch-weather";
+import { homeMainTestId } from "@/consts/test-ids";
 import ErrorPage from "./404";
 import styles from "./styles.module.css";
 
@@ -32,13 +33,12 @@ interface HomeProps {
 
 const Home: FC<HomeProps> = ({ weatherData }) => {
   const weatherPeriodWeActuallyCareAbout: WeatherListItem[] = useMemo(
-    () => getWeatherListForToday(weatherData.list),
+    () => getWeatherListForToday(weatherData?.list),
     [weatherData]
   );
 
-  const [chosenWeatherItem, setChosenWeatherItem] = useState<WeatherListItem>(
-    weatherPeriodWeActuallyCareAbout[0]
-  );
+  const [selectedWeatherItem, setSelectedWeatherItem] =
+    useState<WeatherListItem>(weatherPeriodWeActuallyCareAbout[0]);
 
   const handleWeatherItemChange = (timestamp: number) => {
     const targetWeatherItem = weatherPeriodWeActuallyCareAbout.find(
@@ -47,11 +47,11 @@ const Home: FC<HomeProps> = ({ weatherData }) => {
     if (!targetWeatherItem) {
       return;
     }
-    setChosenWeatherItem(targetWeatherItem);
+    setSelectedWeatherItem(targetWeatherItem);
   };
 
-  if (!chosenWeatherItem) {
-    <ErrorPage />;
+  if (!weatherData || !selectedWeatherItem) {
+    return <ErrorPage />;
   }
 
   return (
@@ -59,14 +59,14 @@ const Home: FC<HomeProps> = ({ weatherData }) => {
       <Head>
         <title>Weather Forecasting Sample App </title>
       </Head>
-      <main className={styles.main}>
+      <main className={styles.main} data-testid={homeMainTestId}>
         <WeatherHeader
-          chosenWeatherItem={chosenWeatherItem}
-          city={weatherData.city}
+          cityName={weatherData.city.name}
+          selectedWeatherItem={selectedWeatherItem}
         />
         <WeatherList
-          chosenWeatherItemTimestamp={chosenWeatherItem.dt}
           handleWeatherItemChange={handleWeatherItemChange}
+          selectedWeatherItemTimestamp={selectedWeatherItem.dt}
           weatherItems={weatherPeriodWeActuallyCareAbout}
         />
       </main>

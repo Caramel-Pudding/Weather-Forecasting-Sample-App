@@ -10,7 +10,7 @@ export const WeatherIconSelector: FC<WeatherIconSelectorProps> = memo(
   ({ weatherType }) => {
     switch (weatherType) {
       case WeatherType.Clear: {
-        return <img alt="Clar" src="icons/weather-sun.svg" />;
+        return <img alt="Clear" src="icons/weather-sun.svg" />;
       }
       case WeatherType.Rain:
       default: {
